@@ -3,10 +3,10 @@ package main
 import (
 	"datastruct/shellsort"
 	// "fmt"
-	"sequenceprom/function"
+	// "sequenceprom/function"
 )
 
 func main() {
-	function.MySwitch()
-	sorter.Shellsort()
+	// function.MySwitch()
+	shellsort.Run()
 }

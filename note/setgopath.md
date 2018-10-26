@@ -1,4 +1,4 @@
- /*
+``` go
 set GOPATH=e:/go_test
  echo $GOPATH
  go get github.com/astaxie/beego
@@ -9,4 +9,4 @@ set GOPATH=e:/go_test
 go version 可查看当前Go语言版本
 go env 可查看与Go语言相关的环境变量
 工作目录下要求创建三个目录，分别为 src，pkg，bin，其中所有源码必须放在src目录下。
-*/
+```
