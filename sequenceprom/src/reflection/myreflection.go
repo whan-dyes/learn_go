@@ -1,5 +1,0 @@
-package reflection
-
-func MyReflection() {
-
-}
