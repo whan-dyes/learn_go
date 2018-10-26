@@ -2,10 +2,11 @@ package main
 
 import (
 	"datastruct/shellsort"
-	"fmt"
+	// "fmt"
+	"sequenceprom/function"
 )
 
 func main() {
-	fmt.Println("Hello,world")
+	function.MySwitch()
 	sorter.Shellsort()
 }
