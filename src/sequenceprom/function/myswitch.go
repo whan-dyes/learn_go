@@ -30,7 +30,7 @@ num:=8
     case 7 <= num && num <= 9:
       fmt.Printf("7-9")
     }
-
+fmt.Println()
   // 在使用switch结构时，我们需要注意以下几点：
   //  左花括号{必须与switch处于同一行；
   //  条件表达式不限制为常量或者整数；
