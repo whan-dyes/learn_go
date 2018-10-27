@@ -1,7 +1,11 @@
 package variable
 import "fmt"
 import "math"
-
+// 全局变量申明，只能用在函数体外
+var(
+  name int=100
+  Name int=200
+)
 func IsEqual(f1, f2, p float64) bool {
 return math.Dim(f1, f2) < p
 }
