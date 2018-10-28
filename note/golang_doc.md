@@ -19,7 +19,8 @@ type(
   type3 byte
 )
 
-
+运行不要退出，将输出到本地8080端口，然后在网页查看 localhost:8080,即可查看官网go文档。
+$ godoc -http=:8080
 
 
 

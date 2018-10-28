@@ -1,5 +1,5 @@
 // qsort_test.go
-package qsort
+package datastruct
 import "testing"
 func TestQuickSort1(t *testing.T) {
   values := []int{5, 4, 3, 2, 1}

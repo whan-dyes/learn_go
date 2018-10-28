@@ -15,13 +15,7 @@ func ArrayVar(){
   array9()
   array10()
 }
-func PrintArray(arr [5]int){
-  for i,n:=range arr{
-    Println("arr[",i,"]=",n)
-  }
-  Println("arr=",arr)
-  Println()
-}
+
 
 
 
@@ -32,7 +26,7 @@ func array1(){
   c:=[...]int{0:3,18: 2}
   d:=[5]int{}
   Println("a=",a)
-    Println("b=",b)
+  Println("b=",b)
   Println("c=",c)
   Println("d=",d)
   Println("d==b:",d==b)
@@ -40,15 +34,15 @@ func array1(){
 
 func array2(){
   Println("..............array2..........")
-  var arr [5]int=[5]int{1,2,3,4,5}
+  var arr=[10]int{1,2,3,4,5}
 
   for i:=0;i<len(arr);i++{
     n:=arr[i]
     Println("arr[",i,"]=",n)
   }
   Println()
+Println("arr[m:n]=",arr[1:6])
 
-  PrintArray(arr)
 }
 
 func array3(){
@@ -68,6 +62,7 @@ func array3(){
   // Println("&b==pb",&b==pb)
   Println()
 }
+
 func array4(){
   Println("..............array4..........")
   i:=[2][3]int{ //行数可以自动计算  i:=[...][3]int 列不行
@@ -75,22 +70,50 @@ func array4(){
     {10,20,2:30}  }
     Println("i=",i)
   }
+
   func array5(){
     Println("..............array5..........")
-
+    //new 创建指向数组的指针
+    var p =new([5]int)
+    // var p =[5]int{}
+    len:=len(p)
+    Println("len(p)=",len)
+    for a,i:=p,0;i<len;i++{
+      a[i]=20+i
+      Println(a)
+    }
+    Println(p)
   }
+
   func array6(){
     Println("..............array6..........")
+    s1:=make([]int,3,6)
+    Printf("%v,%p \n",s1,s1)
+  s1=append(s1,1,2,3)
+  Printf("%v %p\n",s1,s1)
+
+a:=[]int{1,2,3,4,5}
+s2:=a[2:5]
+s3:=a[1:3]
+  Printf("%v,%p \n",s2,s2)
+  Printf("%v,%p \n",s3,s3)
+
+  s3[1]=100
+  Println(s2,"\n",s3,"\n",a[2])
   }
+
   func array7(){
     Println("..............array7..........")
   }
+
   func array8(){
     Println("..............array8..........")
   }
+
   func array9(){
     Println("..............array9..........")
   }
+
   func array10(){
     Println("..............array10..........")
   }

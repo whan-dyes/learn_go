@@ -1,14 +1,13 @@
-package shellsort
-import randnum  "datastruct/generateRandnum"
+package datastruct
 import "fmt"
 import "time"
 
-const N=10
+
 func Run(){
-  var x [N]int
+  // var x [N]int
 
 s1:=time.Now()
-  y :=  a(N,x)
+  y :=  randarray(N)
   s2:=time.Now()
   fmt.Println(s2.Sub(s1))
 
@@ -38,15 +37,4 @@ func shellsort(y [N]int) [N]int{
     }
   }
   return y
-}
-
-func a(n int,b [N]int) [N]int {
-  for  i:=0;i<n;i++ {
-    for j:=0;j<1000;j++{
-    fmt.Print()
-    }
-    var x=randnum.GenerateRandnum(10*N)
-    b[i]=x
-  }
-  return b
 }
