@@ -30,3 +30,43 @@ git commit -am  "commit message"
 # git commit -m "delete work"
 # git push
 ```
+```go
+---------------------------------------------------------------------------------
+特别注意： 括号内均为提示信息
+
+1、常用命令行工具：
+
+  ①cmd     ②powershell      ③git bash
+
+2、命令行常用命令（在git bash上生效，部分在cmd无用）
+
+    -pwd (print working directory) 查看当前所在路径--绝对路径
+
+    -cd(change directory) 切换目标
+
+    -ls(list) 查看当前目录下的内容
+
+    -mkdir(make directory) 创建目录
+
+    -touch 创建文件
+
+    -cat 查看文件内容（一次性将内容全部显示）
+
+    -less 查看文件内容（显示部分信息）--再次输入‘回车’一行一行显示，‘空格’一页一页显示 ，‘b’一次向上走一页
+
+    -rm(remove) 删除文件，-rm -rf 文件夹（循环递进删除文件夹）
+
+    -rmdir(remove directory)删除文件夹（只能删除空文件夹，不常用）
+
+    -clear 清屏
+
+    -q 退出
+
+    -mv(move) 移动文件或重命名
+
+    -cp(copy) 复制文件
+
+    -echo ‘内容’ > 文件名 （输出内容到文件中，每次输入都是覆盖原来的文件）
+
+    -echo ‘内容’ >>文件名（输出内容到文件中，每次输入都是追加新内容）
+```

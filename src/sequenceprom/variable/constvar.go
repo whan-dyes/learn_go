@@ -1,29 +1,31 @@
 package variable
 
-import "fmt"
+import . "fmt"
 
 // 在Go语言中，常量是指编译期间就已知且不可改变的值。常量可以是数值类型（包括整型、
 // 浮点型和复数类型）、布尔类型、字符串类型等。
 func ConstVar() {
+	Println("---------------ConstVar-------------------")
 	const Pi float64 = 3.14159265358979323846
 	const zero = 0.0 // 无类型浮点常量
 	const (
 		size int64  = 1024
 		eof         = -1 // 无类型整型常量
 		Name string = "Joe"
+		alen		int		=len(Name) //常量可用内置函数初始化
 	)
 
-	fmt.Println("Name=", Name)
+	Println("Name=", Name)
 
 	const u, v float32 = 0, 3 // u = 0.0, v = 3.0，常量的多重赋值
 	const a, b, c = 3, 4, "foo"
-	fmt.Println("a=", a)
+	Println("a=", a)
 	 /*a = 3, b = 4, c = "foo", 无类型整型和字符串常量
 	 Go的常量定义可以限定常量类型，但不是必需的。如果定义常量时没有指定类型，那么它
 	 与字面常量一样，是无类型常量。
 	 常量定义的右值也可以是一个在编译期运算的常量表达式，比如*/
 	const mask = 1 << 3
-	fmt.Println("mask=", mask)
+	Println("mask=", mask)
 	// 由于常量的赋值是一个编译期行为，所以右值不能出现任何需要运行期才能得出结果的表达
 	// 式，比如试图以如下方式定义常量就会导致编译错误：
 	//const Home = os.GetEnv("HOME")
@@ -64,6 +66,11 @@ func ConstVar() {
 		c1             // c == 4
 	)
 
-	fmt.Println("a=", a)
+	Println("b1=", b1)
+
+	const (
+		a71,b71=1,"2"
+		c71,d  				//等同 c71,d=1,"2"
+	)
 
 }
