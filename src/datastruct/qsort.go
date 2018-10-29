@@ -1,5 +1,5 @@
 // qsort.go
-package qsort
+package datastruct
 
 func quickSort(values []int, left, right int) {
 	temp := values[left]
