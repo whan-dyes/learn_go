@@ -3,13 +3,12 @@ package main
 import (
 	// "datastruct/shellsort"
 	// "datastruct"
-	// "sequenceprom/variable"
-	"sequenceprom/function"
+	"sequenceprom/variable"
+	// "sequenceprom/function"
 	// "fmt"
 	// "sequenceprom/function"
+	"oop"
 )
-
-
 
 func main() {
 	// variable.ConstVar()
@@ -24,8 +23,9 @@ func main() {
 	// variable.Slice()
 	// variable.Mymap()
 	// datastruct.MapRandArray(datastruct.N)
-	function.AnonymityFun()
-	function.MyFunc()
-	function.MyDefer()
-
+	// function.AnonymityFun()
+	// function.MyFunc()
+	// function.MyDefer()
+	oop.MyOop()
+	variable.MyStruct()
 }
