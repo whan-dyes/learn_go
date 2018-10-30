@@ -25,4 +25,5 @@ func main() {
 	// function.MyDefer()
 	oop.MyOop()
 	oop.MyStruct()
+	oop.MyInterface()
 }

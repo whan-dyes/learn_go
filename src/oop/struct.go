@@ -18,11 +18,6 @@ func MyStruct() {
 	// struct10()
 }
 
-type Rect struct {
-	x, y          float64
-	width, height float64
-}
-
 func struct1() {
 	Println("..............struct1..........")
 	rect1 := new(Rect)
