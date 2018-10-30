@@ -1,9 +1,6 @@
 package main
 
 import (
-	// "datastruct/shellsort"
-	// "datastruct"
-	"sequenceprom/variable"
 	// "sequenceprom/function"
 	// "fmt"
 	// "sequenceprom/function"
@@ -27,5 +24,5 @@ func main() {
 	// function.MyFunc()
 	// function.MyDefer()
 	oop.MyOop()
-	variable.MyStruct()
+	oop.MyStruct()
 }

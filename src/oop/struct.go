@@ -1,52 +1,47 @@
 package oop
 
 import (
-	"fmt"
+	. "fmt"
 )
 
-type INT int //类型别名
-
-type A struct {
-	B
-	Name string
-}
-
-type B struct {
-	Name string
-}
-
 func MyStruct() {
-	a := &A{B: B{Name: "A_B Name"}, Name: "Joe A"}
-
-	c := struct {
-		Age int
-	}{
-		Age: 28,
-	}
-	fmt.Println("c=", c.Age)
-
-	a.Print()
-	fmt.Println(a.Name, ",", a.B.Name)
-
-	b := &B{Name: "John B"}
-	b.Print()
-	fmt.Println(b.Name)
-
-	var i INT
-	i = 100
-	i.Print()
+	Println("---------------------MyStruct--------------------------")
+	struct1()
+	// struct2()
+	// struct3()
+	// struct4()
+	// struct5()
+	// struct6()
+	// struct7()
+	// struct8()
+	// struct9()
+	// struct10()
 }
 
-func (a *A) Print() { //引用传递
-	a.Name = "joe AA"
-	fmt.Println("A=", a)
+type Rect struct {
+	x, y          float64
+	width, height float64
 }
 
-func (b B) Print() { //值传递
-	b.Name = "John BB"
-	fmt.Println("B=", b)
+func struct1() {
+	Println("..............struct1..........")
+	rect1 := new(Rect)
+	rect2 := &Rect{}
+	rect3 := &Rect{0, 0, 100, 200}
+	rect4 := &Rect{width: 100, height: 200}
+	rect5 := NewRect(0, 0, 10, 20)
+	s := rect5.Area()
+	Println("rect5.Area()=", s)
+	Println("rect1=", rect1)
+	Println("rect2=", rect2)
+	Println("rect3=", rect3)
+	Println("rect4=", rect4)
+	Println("rect5=", rect5)
+}
+func NewRect(x, y, width, height float64) *Rect {
+	return &Rect{x, y, width, height}
 }
 
-func (i INT) Print() { //值传递
-	fmt.Println("INT=", i)
+func (r *Rect) Area() float64 {
+	return r.width * r.height
 }
