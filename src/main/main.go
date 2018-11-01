@@ -4,6 +4,7 @@ import (
 	// "sequenceprom/function"
 	// "fmt"
 	// "sequenceprom/function"
+	"channel"
 	"oop"
 )
 
@@ -26,4 +27,5 @@ func main() {
 	oop.MyOop()
 	oop.MyStruct()
 	oop.MyInterface()
+	channel.MyChannel()
 }
