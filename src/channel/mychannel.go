@@ -3,6 +3,7 @@ package channel
 import (
 	. "fmt"
 	"runtime"
+	"time"
 	"sync"
 )
 
@@ -13,7 +14,7 @@ func MyChannel() {
 	channel2()
 	channel3()
 	channel4()
-	// channel5()
+	channel5()
 	// channel6()
 	// channel7()
 	// channel8()
@@ -52,11 +53,16 @@ func channel1() {
 	var value int = 2
 	go func() {
 		ch <- value
+		close(ch)    //必须有close（ch），与 for：v :=range ch 对应。
 		Println("read into channel ch.")
 	}()
 	// 向channel写入数据通常会导致程序阻塞，直到有其他goroutine从这个
 	// channel中读取数据。从	channel中读取数据的语法是
-	<-ch
+// value =	<-ch
+for v :=range ch{
+	Println(v)
+}
+
 	// 如果channel之前没有写入数据，那么从channel中读取数据也会导致程序阻塞，
 	// 直到channel	中被写入数据为止。我们之后还会提到如何控制channel只接受
 	// 写或者只允许读取，即单向	channel。
@@ -78,14 +84,17 @@ func channel2() {
 func channel3() {
 	Println("..................channel3 ..........")
 	//-------------------
+	// runtime.GOMAXPROCS(runtime.NumCPU())
 	b := make(chan bool, 10)
-	for i := 0; i < 10; i++ {
+
+	for 	i := 0; i < 10; i++ {
 		go Go(b, i)
 	}
 	for i := 0; i < 10; i++ {
 		<-b
-
 	}
+
+	time.Sleep(2*time.Microsecond)
 	Println("Go end.")
 }
 
@@ -101,5 +110,18 @@ func channel4() {
 	go a()
 	for v := range c {
 		Println(v)
+	}
+}
+
+func channel5() {
+	Println("..................channel5 ..........")
+	ch := make(chan int, 1)
+	for i:=0;i<10;i++ {
+		select {
+			case ch <- 0:
+			case ch <- 1:
+		}
+	i := <-ch
+	Println("Value received:", i)
 	}
 }

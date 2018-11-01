@@ -5,7 +5,7 @@ import (
 	// "fmt"
 	// "sequenceprom/function"
 	"channel"
-	"oop"
+	// "oop"
 )
 
 func main() {
@@ -24,8 +24,8 @@ func main() {
 	// function.AnonymityFun()
 	// function.MyFunc()
 	// function.MyDefer()
-	oop.MyOop()
-	oop.MyStruct()
-	oop.MyInterface()
+	// oop.MyOop()
+	// oop.MyStruct()
+	// oop.MyInterface()
 	channel.MyChannel()
 }
