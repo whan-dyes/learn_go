@@ -3,8 +3,11 @@ package main
 import (
 	// "sequenceprom/function"
 	// "fmt"
-	// "sequenceprom/function"
-	"channel"
+	// "sequenceprom/reflection"
+	// "sequenceprom/order"
+	// "channel"
+	// "golang.org/x/lint"
+	"goweb"
 	// "oop"
 )
 
@@ -27,5 +30,8 @@ func main() {
 	// oop.MyOop()
 	// oop.MyStruct()
 	// oop.MyInterface()
-	channel.MyChannel()
+	// channel.MyChannel()
+	// reflection.MyReflection()
+	goweb.MyGoweb()
+
 }
