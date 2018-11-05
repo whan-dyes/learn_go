@@ -29,7 +29,7 @@ continue   for                  import    return             var
 Go注释方法
 
 // ：单行注释
-/* */：多行注释
+\/* *\/：多行注释
 
 
 Go基本类型

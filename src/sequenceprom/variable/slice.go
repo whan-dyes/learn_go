@@ -161,7 +161,7 @@ func slice4() {
 	Println(sm)
 }
 func slice5() {
-	Println(".........slice5.........")
+
 }
 func slice6() {
 	Println(".........slice6.........")

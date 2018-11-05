@@ -8,15 +8,23 @@ func MyFunc() {
 	Println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>> MyFunc <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 	myfunc1()
 	myfunc2()
-	s := []int{1, 2, 3}
-	myfunc3(s, 4, 5, 6, 7, 8)
-	Println(s)
+	s1 := []int{1, 2, 3}
+	myfunc3(s1, 1, 2, 3)
 
-	a := 1
-	Println("Myfunc() a=", a)
-	M := myfunc4 //golang中函数也是一种类型
-	M(&a)
-	Println("Myfunc() a=", a)
+	x := 11
+	myfunc4(&x)
+	myfunc5()
+	myfunc6(10, 20, add) //参数为函数名，实现多态
+	myfunc6(20, 10, minus)
+	// s := []int{1, 2, 3}
+	// myfunc3(s, 4, 5, 6, 7, 8)
+	// Println(s)
+	//
+	// a := 1
+	// Println("Myfunc() a=", a)
+	// M := myfunc4 //golang中函数也是一种类型
+	// M(&a)
+	// Println("Myfunc() a=", a)
 }
 
 func myfunc1() (a, b, c int) {
@@ -46,6 +54,31 @@ func myfunc4(a *int) {
 	Println("............ myfunc4() ...........")
 	*a = 100
 	Println("*a=", *a)
+}
+
+//------------函数类型示例--------------
+func add(a, b int) int {
+	return a + b
+}
+func minus(a, b int) int {
+	return a - b
+}
+
+type FuncType func(int, int) int
+
+func myfunc5() {
+	Println("............ myfunc5() 函数类型...........")
+	var f FuncType
+	f = add
+	Println(f(20, 10))
+
+	f = minus
+	Println(f(20, 10))
+}
+func myfunc6(a, b int, f FuncType) {
+	Println("............ myfunc6() 回调函数，传入函数名参数..........")
+
+	Println("f=", f(a, b))
 }
 
 /*
