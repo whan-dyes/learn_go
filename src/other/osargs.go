@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	fmt.Println("This is a other init func1")
+	fmt.Println("This is a other/Other() init func1")
 }
 
 func Other() {

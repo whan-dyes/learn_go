@@ -1,3 +1,3 @@
 package datastruct
 
-const N=10
+const N = 100

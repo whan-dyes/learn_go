@@ -1,41 +1,34 @@
 package datastruct
-import ("math/rand"
- "time"
- . "fmt"
+
+import (
+	// . "fmt"
+	"math/rand"
+	"time"
 )
 
+func randarray(n int) []int {
+	b := make([]int, n)
+	rand.Seed(time.Now().UnixNano())
 
+	for i := 0; i < n; i++ {
+		b[i] = rand.Intn(5 * N)
+	}
 
-func GenerateRandnum(n int) int{
-  rand.Seed(time.Now().UnixNano())
-  rnd := rand.Intn(n)
-
-  return rnd
-}
-func randarray(n int) [N]int {
-  b:=[N]int{}
-  for  i:=0;i<n;i++ {
-    for j:=0;j<1000;j++{
-    Print()
-    }
-    var x=GenerateRandnum(5*N)
-    b[i]=x
-  }
-  return b
+	return b
 }
 
 func MapRandArray(n int) []int {
-m:=make(map[int]int)
-for i:=0;i<n;i++{
-  m[i]=i+1
-}
-// Println(m)
-s:=make([]int,len(m))
-i:=0
-for _,v:=range m {
-  s[i]=v
-  i++
-}
-// Println(s)
-return s
+	m := make(map[int]int)
+	for i := 0; i < n; i++ {
+		m[i] = i + 1
+	}
+
+	s := make([]int, len(m))
+	i := 0
+	for _, v := range m {
+		s[i] = v
+		i++
+	}
+
+	return s
 }
