@@ -115,8 +115,14 @@ func array6() {
 
 func array7() {
 	Println("..............array7..........")
+	var b *[3]int = &[3]int{1, 2, 3}
+	s(b)
+}
+func s(p *[3]int) {
+	Println(*p)
 }
 
+//--------------------------------------
 func array8() {
 	Println("..............array8..........")
 }

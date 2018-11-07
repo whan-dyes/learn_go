@@ -1,19 +1,21 @@
 package main
 
 import (
+	// "datastruct"
 	// "sequenceprom/function"
 	// "fmt"
 	// "sequenceprom/reflection"
 	// "sequenceprom/order"
-	// "sequenceprom/variable"
+	"sequenceprom/variable"
 	// "channel"
 	// "golang.org/x/lint"
 	// "goweb"
 	// "oop"
-	_ "other" // _ 下划线的作用，不使用包里的任何函数，只调用init函数，包里的每个文件中的init都调用一次。
+	"other" // _ 下划线的作用，不使用包里的任何函数，只调用init函数，包里的每个文件中的init都调用一次。
 )
 
 func main() {
+	other.RandomNum()
 	// other.Other()
 	// variable.ConstVar()
 	// variable.StringVar()
@@ -22,7 +24,7 @@ func main() {
 	// variable.EnumVar()
 	// variable.Pointer()
 	// variable.Control()
-	// variable.ArrayVar()
+	variable.ArrayVar()
 	// datastruct.Buddle()
 	// variable.Slice()
 	// variable.Mymap()
