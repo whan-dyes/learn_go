@@ -10,13 +10,19 @@ func MyStruct() {
 	struct2()
 	struct3()
 	struct4()
-	// struct5()
+	struct5()
 	// struct6()
 	// struct7()
 	// struct8()
 	// struct9()
 	// struct10()
 }
+func struct5() {
+	Println("..............struct5  嵌入结构初始化..........")
+	a := &Test{}
+	Println(a)
+}
+
 func struct4() {
 	Println("..............struct4  嵌入结构初始化..........")
 	a := &teacher{Name: "joe", Age: 38, human: human{Sex: 0}}

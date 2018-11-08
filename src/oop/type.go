@@ -74,3 +74,6 @@ type student struct {
 }
 
 //---------------------------------------------------
+type Test struct {
+	str string "aaa"
+}

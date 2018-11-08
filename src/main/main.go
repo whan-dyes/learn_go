@@ -1,17 +1,9 @@
 package main
 
 import (
-	// "datastruct"
-	// "sequenceprom/function"
-	// "fmt"
-	// "sequenceprom/reflection"
-	// "sequenceprom/order"
-	"sequenceprom/variable"
-	// "channel"
-	// "golang.org/x/lint"
-	// "goweb"
-	// "oop"
-	"other" // _ 下划线的作用，不使用包里的任何函数，只调用init函数，包里的每个文件中的init都调用一次。
+	// _	"other" // _ 下划线的作用，不使用包里的任何函数，只调用init函数，包里的每个文件中的init都调用一次。
+	"oop"
+	"other"
 )
 
 func main() {
@@ -24,7 +16,7 @@ func main() {
 	// variable.EnumVar()
 	// variable.Pointer()
 	// variable.Control()
-	variable.ArrayVar()
+	// variable.ArrayVar()
 	// datastruct.Buddle()
 	// variable.Slice()
 	// variable.Mymap()
@@ -33,7 +25,7 @@ func main() {
 	// function.MyFunc()
 	// function.MyDefer()
 	// oop.MyOop()
-	// oop.MyStruct()
+	oop.MyStruct()
 	// oop.MyInterface()
 	// channel.MyChannel()
 	// reflection.MyReflection()
