@@ -4,11 +4,14 @@ import (
 	// _	"other" // _ 下划线的作用，不使用包里的任何函数，只调用init函数，包里的每个文件中的init都调用一次。
 	// "oop"
 	// "other"
-	"sequenceprom/variable"
+//	"sequenceprom/variable"
+//	"channel"
+	"packagetest"
 )
 
 func main() {
-	variable.WhanRegexp()
+	packagetest.WhanTimer()
+//	variable.WhanRegexp()
 	// other.RandomNum()
 	// other.Other()
 	// variable.ConstVar()
@@ -29,7 +32,7 @@ func main() {
 	// oop.MyOop()
 	// oop.MyStruct()
 	// oop.MyInterface()
-	// channel.MyChannel()
+//	 channel.MyChannel()
 	// reflection.MyReflection()
 	// goweb.MyGoweb()
 
