@@ -2,12 +2,14 @@ package main
 
 import (
 	// _	"other" // _ 下划线的作用，不使用包里的任何函数，只调用init函数，包里的每个文件中的init都调用一次。
-	"oop"
-	"other"
+	// "oop"
+	// "other"
+	"sequenceprom/variable"
 )
 
 func main() {
-	other.RandomNum()
+	variable.WhanRegexp()
+	// other.RandomNum()
 	// other.Other()
 	// variable.ConstVar()
 	// variable.StringVar()
@@ -25,7 +27,7 @@ func main() {
 	// function.MyFunc()
 	// function.MyDefer()
 	// oop.MyOop()
-	oop.MyStruct()
+	// oop.MyStruct()
 	// oop.MyInterface()
 	// channel.MyChannel()
 	// reflection.MyReflection()
