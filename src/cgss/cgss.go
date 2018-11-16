@@ -1,10 +1,10 @@
-package main
+package cgss
 
 import (
 	"bufio"
-	"cg"
+	"cgss/cg"
 	"fmt"
-	"ipc"
+	"cgss/ipc"
 	"os"
 	"strconv"
 	"strings"
@@ -99,7 +99,7 @@ func GetCommandHandlers() map[string]func(args []string) int {
 		"send":       Send,
 	}
 }
-func main() {
+func cgss() {
 	fmt.Println("Casual Game Server Solution")
 	startCenterService()
 	Help(nil)

@@ -7,10 +7,12 @@ import (
 //	"sequenceprom/variable"
 //	"channel"
 	"packagetest"
+	"cgss"
 )
 
 func main() {
-	packagetest.WhanTimer()
+	cgss.cgss()
+//	packagetest.WhanTimer()
 //	variable.WhanRegexp()
 	// other.RandomNum()
 	// other.Other()
