@@ -3,7 +3,7 @@ package cg
 import (
 	"encoding/json"
 	"errors"
-	"ipc"
+	"cgss/ipc"
 )
 
 type CenterClient struct {
